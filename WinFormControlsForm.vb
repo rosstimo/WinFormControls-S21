@@ -7,6 +7,8 @@
         Dim message As String
         Dim userAge As Integer
 
+        EvaluateCheckboxes()
+
         If FirstNameTextBox.Text = "" Then
             message = "First name is required" & vbNewLine
         End If
@@ -46,4 +48,18 @@
 
         'MsgBox("Yippeee!!!")
     End Sub
+
+    Sub EvaluateCheckboxes()
+        If CheckBox1.Checked = True Then
+            MsgBox("The box is checked!")
+        End If
+    End Sub
+
+    Private Sub WinFormControlsForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        RadioButton1.Checked = True
+        RadioButton4.Checked = True
+
+        ToolStripTextBox1.Text = "hello"
+    End Sub
+
 End Class
